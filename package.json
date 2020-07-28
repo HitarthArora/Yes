@@ -2,10 +2,9 @@
   "name": "gitt",
   "version": "1.0.0",
   "description": "null",
-  "main": "Git.html",
-  "dev": "lite-server",
+  "main": "aboutus.html",
   "scripts": {
-    "start": "lite-server",
+    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -4,9 +4,9 @@
 
 .row-content {
   margin: 0px auto;
-  padding: 50px 0px;
+  padding: 35px 0px;
   border-bottom: 1px ridge;
-  min-height: 400px; }
+  min-height: 225px; }
 
 .footer {
   background-color: #D1C4E9;
@@ -34,8 +34,4 @@ body{
 .navbar-dark {
      background-color: #512DA8;
 }
-
-
-
-
 

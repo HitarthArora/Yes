@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/scss/styles.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div id="reserveTableModal" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -172,7 +172,7 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <br>
                     <span class="navbar-text">
-                        <a role="button" data-toggle="modal" data-target="#reserveTableModal" class="btn btn-block nav-link btn-warning text-white" >
+                        <a role="button" class="btn btn-block nav-link btn-warning text-white" id="reserveButton">
                             <h4>Reserve Table</h4>
                         </a>
                     </span>
@@ -421,7 +421,12 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
-            
+            $('#reserveButton').click(function(){
+                $('#reserveModal').modal('show');
+            });
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('show'); 
+            });
         });
     </script>
 </body>

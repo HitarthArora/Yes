@@ -5,7 +5,8 @@
   "main": "aboutus.html",
   "scripts": {
     "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/scss/ css/scss/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
   "homepage": "https://github.com/HitarthArora/Yes#readme",
   "devDependencies": {
     "http-proxy-middleware": "^1.0.5",
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",

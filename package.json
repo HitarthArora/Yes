@@ -4,9 +4,13 @@
   "description": "null",
   "main": "aboutus.html",
   "scripts": {
+    "start": "npm run watch:all",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o css/scss/ css/scss/"
+    "lite": "lite-server",
+    "scss": "node-sass -o css/scss/ css/scss/",
+    "watch:scss": "onchange \"css/scss/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite-server\" "
   },
   "repository": {
     "type": "git",
@@ -23,14 +27,16 @@
   "homepage": "https://github.com/HitarthArora/Yes#readme",
   "devDependencies": {
     "http-proxy-middleware": "^1.0.5",
+    "jquery": "^3.5.1",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
+    "popper.js": "^1.16.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.5.0",
     "bootstrap-social": "^5.1.1",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
+    "font-awesome": "^4.7.0"
   }
 }

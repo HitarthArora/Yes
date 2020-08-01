@@ -10,7 +10,12 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/scss/ css/scss/",
     "watch:scss": "onchange \"css/scss/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite-server\" "
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite-server\" ",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -26,13 +31,18 @@
   },
   "homepage": "https://github.com/HitarthArora/Yes#readme",
   "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
     "http-proxy-middleware": "^1.0.5",
     "jquery": "^3.5.1",
     "lite-server": "^2.5.4",
     "node-sass": "^4.14.1",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
